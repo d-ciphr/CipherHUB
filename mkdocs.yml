@@ -47,8 +47,6 @@ extra:
 # Additional files
 extra_css:
     - 'Code/css/badges.css'
-    - 'Code/css/imageviewer.css'
 extra_javascript:
-  - 'Code/js/imageviewersupport.js'
   - 'Code/js/time.js'
   - 'Code/js/robloxgroup.js'

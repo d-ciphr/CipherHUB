@@ -71,7 +71,7 @@ Side-projects that I have not released yet.
 ---
 
 #### HUD
-> <img src="/Images/Av1.png" alt="HUD Image" width="755" height="240" />
+![Stats](/Images/Av1.png)
 
 ---
 
