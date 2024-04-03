@@ -71,7 +71,7 @@ Side-projects that I have not released yet.
 ---
 
 #### HUD
-![Stats](Images/Av1.png)
+![Stats](Images/Av1.jpg)
 
 ---
 
