@@ -30,7 +30,7 @@ You can see my impact in the credits of this game on the main menu.
   <source src="https://i.gyazo.com/e611a185e2a50bc721f61abef525164b.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-![Dashing](/Images/Or1.png)
-![High Ground](/Images/Or2.png)
-![Climbing](/Images/Or3.png)
-![Best Time](/Images/Or4.png)
+![Dashing](Images/Or1.png)
+![High Ground](Images/Or2.png)
+![Climbing](Images/Or3.png)
+![Best Time](Images/Or4.png)

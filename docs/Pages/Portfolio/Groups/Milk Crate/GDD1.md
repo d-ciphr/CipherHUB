@@ -9,5 +9,5 @@ programming whatsoever.
 ----
 ## Media
 
-![Dashing](/Images/Gdd1.png)
-![High Ground](/Images/Gdd2.png)
+![Dashing](Images/Gdd1.png)
+![High Ground](Images/Gdd2.png)

@@ -17,7 +17,7 @@ The animations were provided by [@Bravo_RBXL](https://www.roblox.com/users/41549
   Your browser does not support the video tag.
 </video>
 
-![Dashing](/Images/UPG1.jpg)
-![High Ground](/Images/UPG2.jpg)
-![Climbing](/Images/UPG3.jpg)
-![Best Time](/Images/UPG4.jpg)
+![Dashing](Images/UPG1.jpg)
+![High Ground](Images/UPG2.jpg)
+![Climbing](Images/UPG3.jpg)
+![Best Time](Images/UPG4.jpg)
