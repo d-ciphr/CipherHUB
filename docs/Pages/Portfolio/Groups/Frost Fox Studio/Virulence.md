@@ -22,22 +22,13 @@ You can see my impact in the credits of this game on the main menu.
 
 ----
 ## Media
-<div class="image-viewer">
-    <div class="image-container">
-        <div class="nav-button left" onclick="navigate(-1)">&#10094;</div>
-        <img id="currentImage" class="display-image" src="/Images/Vr1.png" alt="Main Display" style="opacity: 1;"/>
-        <img id="nextImage" class="display-image" style="opacity: 0; position: absolute; top: 0; left: 0;" src="" alt="" />
-        <video id="videoPlayer" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" controls>
-            <source src="" type="video/mp4">
-        </video>
-        <div class="nav-button right" onclick="navigate(1)">&#10095;</div>
-    </div>
-    <div class="thumbnails">
-		<img data-video-src="https://i.gyazo.com/cfdffc29d498434e90596d913c52c41a.mp4" src="/Images/placeholder_for_video.jpg" alt="Sample Video"/>
-        <img src="/Images/Vr1.png" alt="UI Menu"/>
-        <img src="/Images/Vr2.png" alt="Emote Menu"/>
-        <img src="/Images/Vr3.png" alt="Settings Menu"/>
-        <img src="/Images/Vr4.png" alt="Music Player"/>
-        <img src="/Images/Vr5.png" alt="Additional Menu"/>
-    </div>
-</div>
+
+<video width="755" height="240" controls>
+  <source src="https://i.gyazo.com/cfdffc29d498434e90596d913c52c41a.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+![Dashing](/Images/Vr1.png)
+![High Ground](/Images/Vr2.png)
+![Climbing](/Images/Vr3.png)
+![Best Time](/Images/Vr4.png)
+![Best Time 2](/Images/Vr5.png)
