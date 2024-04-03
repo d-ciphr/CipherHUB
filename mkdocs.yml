@@ -1,0 +1,54 @@
+site_name: D_CIPHR's Site
+
+# Theme and Visuals
+theme:
+    name: material
+    language: en
+    features:
+        - navigation.tabs
+        - navigation.top
+        - search.suggest
+        - search.highlight
+    palette:
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+        
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+      linenums: true
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.arithmatex:
+        generic: true
+  - footnotes
+  - pymdownx.mark
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  
+# Social Media
+extra:
+    social:
+     - icon: fontawesome/brands/youtube
+       link: https://www.youtube.com/@MRkranchers
+# Additional files
+extra_css:
+    - 'Code/css/badges.css'
+    - 'Code/css/imageviewer.css'
+extra_javascript:
+  - 'Code/js/imageviewersupport.js'
+  - 'Code/js/time.js'
+  - 'Code/js/robloxgroup.js'

@@ -1,0 +1,79 @@
+.image-viewer {
+    position: relative;
+    width: 80%; /* Adjust based on your needs */
+    /* This will create a container with a 16:9 aspect ratio */
+    /* The padding-top percentage is calculated by (9 / 16) * 100% */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin: auto;
+    overflow: hidden; /* Ensures nothing spills outside the container */
+}
+
+.image-viewer .thumbnails {
+    display: none;  /* Thumbnails are not displayed; they're just used for navigation */
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+.image-container video {
+    width: 100%;
+    display: block;
+    position: absolute; /* This ensures the video overlays in the same place as the image */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Start the video hidden */
+    transition: opacity 0.5s ease; /* Smooth transition for the video */
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Make sure buttons are above the image */
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    opacity: 0; /* Start with buttons hidden */
+    transition: opacity 0.5s ease;
+}
+
+.image-container:hover .nav-button {
+    opacity: 1;
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+.display-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
