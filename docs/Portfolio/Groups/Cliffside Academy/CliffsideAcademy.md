@@ -1,5 +1,5 @@
 # Cliffside Academy
-A roleplaying game.
+A roleplaying game based on the popular Rockstar game, [Bully](https://store.steampowered.com/app/12200/Bully_Scholarship_Edition/).
 
 You can look at the game [here](https://www.roblox.com/games/7287725541/Cliffside-Academy).
 
