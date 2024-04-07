@@ -3,7 +3,7 @@ This is a music player that handles the playback of music.
 Allows for complete control over traditional features that modern music players have,
 like Shuffle, Loop, and song indexing. 
 
-The music player in [Observation Room](ObservationRoom.md).
+The music player in [Observation Room](/Portfolio/Groups/Frost%20Fox%20Studio/ObservationRoom).
 <video width="755" height="240" controls>
   <source src="https://i.gyazo.com/2cd4ee2c19a0793607cf3f8cbe4000a8.mp4" type="video/mp4">
   Your browser does not support the video tag.
