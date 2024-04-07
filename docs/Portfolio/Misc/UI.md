@@ -111,7 +111,7 @@ Side-projects that I have not released yet.
 
 #### Dialogue
 > <video width="755" height="240" controls>
-  <source src="https://i.gyazo.com/4eb16bc29343ca4447caca01bc36ea2b.mp4" type="video/mp4">
+  <source src="https://i.gyazo.com/799068d3a807dbb77c2f1158cb0d0cb4.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
