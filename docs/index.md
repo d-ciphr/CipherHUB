@@ -18,7 +18,7 @@ Ever since I was extremely young, I've always loved playing video games. The ide
 came off as appealing to me. My love really sparked to life when I received my first console: The Nintendo GameCube.
 I experienced so many different feelings playing all of these different games. I loved every second of my experiences, and I occasionally go back to 
 look at old games that brought me countless hours of joy. The idea that games can be a way to express yourself always dawned to me as the main draw
-to game-development as a whole. You may notice I've taken inspiration in the projects I've worked on, like my [Untitled Platforming Game](/Portfolio/Side Projects/UPG), or [Observation Room](/Portfolio/Groups/Frost Fox Studio/ObservationRoom).
+to game-development as a whole. You may notice I've taken inspiration in the projects I've worked on, like my [Untitled Platforming Game](UPG.md), or [Observation Room](ObservationRoom.md).
 
 ### Highlights
 - My native language is English, but I can also speak Portuguese fluently because my family 
