@@ -99,6 +99,24 @@ Side-projects that I have not released yet.
 
 ---
 
+### Blockquest!
+
+#### Battle
+> <video width="755" height="240" controls>
+  <source src="https://i.gyazo.com/4eb16bc29343ca4447caca01bc36ea2b.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+#### Dialogue
+> <video width="755" height="240" controls>
+  <source src="https://i.gyazo.com/4eb16bc29343ca4447caca01bc36ea2b.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
 ## Commission UI
 
 UI I've created for games. Either for commission or while I was working at their group.
