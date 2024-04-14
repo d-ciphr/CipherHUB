@@ -17,7 +17,7 @@ may come with working with other people.
 -- Modules
 local SmartSignal = require(game:GetService("ReplicatedStorage").SmartSignal)
 
-local Signal = DynaNPC.new(Rig)
+local Signal = SmartSignal.new()
 ```
 Returns a `Signal` class, which can use the methods listed below.
 ----
