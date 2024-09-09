@@ -11,4 +11,4 @@ game-developer on Roblox.
 I'm currently trying to [get verified](https://en.help.roblox.com/hc/en-us/articles/7997207259156-Verified-Badge-FAQ) on Roblox.
 Please [follow me](https://www.roblox.com/users/20190887/profile) if you haven't already! It opens up more possibilities for me in the future.
 ----
-If you'd like to learn more about me, visit the ["About Me"](/CipherHUB/About%20Me/index) page!
+If you'd like to learn more about me, visit the ["About Me"](/CipherHUB/About/index) page!

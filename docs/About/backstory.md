@@ -1,6 +1,7 @@
 # Autobiography
 I see you're interested in my upbringing! Well, prepare for the biggest "yap session" of your life, you're gonna be here a while.
 There's plenty of smaller sub-stories between these categories, this is just the stuff I can explicitly talk about off the top of my head.
+
 ----
 ### Start
 This started when I was born. I was a very happy kid, always smiling. Seeing the positive side of life. I was born alongside my two brothers, each two years apart from each other. I grew up with a desire to see how things worked. This involves clogging toilets, writing on the wall, microwaving forks, y'know. Normal kid stuff. (I was quickly disciplined by my parents.) My parents realized right away that I picked up math very early in my life, and I had a love for it. My parents did my best to nuture it, and I was quickly moved into Pre-K. Albeit, I was a very shy and anxious kid. (I CRIED A LOT, ASKED FOR MY MOM). It took a lot of getting used to it, but I eventually started growing into my environment. Do keep in mind it's been quite a few years (21 to be exact, although soon to be 22 (I'm typing this out two days before my 22nd birthday)) so take things with a grain of salt. I started learning how to socialize, and get along with people. A few years of me learning in Elementary School and I was already taking more solid classes.
