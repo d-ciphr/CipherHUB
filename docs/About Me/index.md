@@ -1,4 +1,4 @@
-# About Me
+# Main
 I'm an aspiring programmer with a knack for innovation and design. Game-development is a passion to me, and I aim to do this for a living. 
 Ever since I was extremely young, I've always loved playing video games. The idea of being able to immerse yourself in a brand new world always 
 came off as appealing to me. My love really sparked to life when I received my first console: The Nintendo GameCube.
