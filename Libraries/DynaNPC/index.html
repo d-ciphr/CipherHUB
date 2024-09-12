@@ -1,0 +1,2438 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://d-ciphr.github.io/Libraries/DynaNPC/">
+      
+      
+        <link rel="prev" href="../CipherLib/">
+      
+      
+        <link rel="next" href="../MusicHandler/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>DynaNPC - CipherHUB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../Code/css/badges.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dynanpc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CipherHUB" class="md-header__button md-logo" aria-label="CipherHUB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CipherHUB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DynaNPC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/d-ciphr/CipherHUB" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cipher`s Github
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../About/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../CipherLib/" class="md-tabs__link">
+          
+  
+  Libraries
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Portfolio/Groups/Cliffside%20Academy/" class="md-tabs__link">
+          
+  
+  Portfolio
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CipherHUB" class="md-nav__button md-logo" aria-label="CipherHUB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CipherHUB
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/d-ciphr/CipherHUB" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cipher`s Github
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../About/backstory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autobiography
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Libraries
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Libraries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CipherLib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CipherLib
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DynaNPC
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    DynaNPC
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurable-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurable Tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurable Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ncparams" class="md-nav__link">
+    <span class="md-ellipsis">
+      NCParams
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-and-constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods and Constructors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods and Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynanpcnewrig-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynaNPC.new(Rig, Configs?)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npcsetwatchingpart" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:SetWatching(Part?)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npccanseetarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:CanSee(Target)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcsetstatenewstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:SetState(NewState, ...)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcgetnearestcharacterncparams" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:GetNearestCharacter(NCParams?)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcgetbackpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:GetBackpack()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcgettooltoolname" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:GetTool(ToolName?)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcusetoolactivatetool" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:UseTool(ActivateTool?)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcdroptooltargettool" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:DropTool(TargetTool)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npchandlecleanupobject-autocleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:HandleCleanup(Object, AutoCleanup)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npc_debugloglogtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:_DebugLog(LogText)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npcstateupdated" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.StateUpdated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcwaypointbegan" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.WaypointBegan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcchrtouched" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.ChrTouched
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcconfigchanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Config.Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npceventschanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Events.Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npcrig" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Rig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npchum" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Hum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npc_autocleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC._AutoCleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcanimhandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.AnimHandler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Configs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.State
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcstates" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.States
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npclastparams" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.LastParams
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MusicHandler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MusicHandler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProxyTable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProxyTable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SmartSignal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SmartSignal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WatchManager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WatchManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Portfolio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Portfolio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Groups
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Groups
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cliffside Academy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Cliffside Academy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Cliffside%20Academy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Cliffside%20Academy/CliffsideAcademy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cliffside Academy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Eden 227
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Eden 227
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Eden-227/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Eden-227/DecayingWinter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decaying Winter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frost Fox Studio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Frost Fox Studio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Frost%20Fox%20Studio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Frost%20Fox%20Studio/ObservationRoom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Observation Room
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Frost%20Fox%20Studio/Virulence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virulence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Milk Crate
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Milk Crate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Milk%20Crate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Milk%20Crate/GDD1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (I) Game Design Document
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Scorched Entertainment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Scorched Entertainment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Groups/Scorched%20Entertainment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Misc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Misc/UI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Side Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Side Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Portfolio/Side%20Projects/UPG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Untitled Platforming Game
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurable-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurable Tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurable Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ncparams" class="md-nav__link">
+    <span class="md-ellipsis">
+      NCParams
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods-and-constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods and Constructors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods and Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynanpcnewrig-configs" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynaNPC.new(Rig, Configs?)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npcsetwatchingpart" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:SetWatching(Part?)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npccanseetarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:CanSee(Target)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcsetstatenewstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:SetState(NewState, ...)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcgetnearestcharacterncparams" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:GetNearestCharacter(NCParams?)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcgetbackpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:GetBackpack()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcgettooltoolname" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:GetTool(ToolName?)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcusetoolactivatetool" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:UseTool(ActivateTool?)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcdroptooltargettool" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:DropTool(TargetTool)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npchandlecleanupobject-autocleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:HandleCleanup(Object, AutoCleanup)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npc_debugloglogtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC:_DebugLog(LogText)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npcstateupdated" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.StateUpdated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcwaypointbegan" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.WaypointBegan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcchrtouched" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.ChrTouched
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcconfigchanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Config.Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npceventschanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Events.Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npcrig" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Rig
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npchum" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Hum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npc_autocleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC._AutoCleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcanimhandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.AnimHandler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.Configs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.State
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcstates" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.States
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npclastparams" class="md-nav__link">
+    <span class="md-ellipsis">
+      NPC.LastParams
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="dynanpc">DynaNPC</h1>
+<p>This is a dynamic NPC system that handles all of the brunt and heavy lifting.
+It will also handle garbage collection and memory de-allocation to save resources.
+Features numerous different signals, and dynamic type casting.
+All you need to do is provide it with a rig and it can do the rest!</p>
+<video width="755" height="240" controls>
+  <source src="https://i.gyazo.com/579b7c897dd8211952e9207f6d5e4fa1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<hr />
+<h2 id="configurable-tables">Configurable Tables</h2>
+<h3 id="configs"><strong>Configs</strong></h3>
+<blockquote>
+<p><em>These are properties that can be edited via NPC.Config, or instantiated in the NPC.new constructor in a table.
+Not including them in the table (or not giving a Config table at all) will leave them as the default values shown below:</em>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">--// Debug Configs (DebugEnabled must be true to use any of the below)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">DebugEnabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">DB_LogConfigChanges</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Logs changes to the config dictionary.</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">DB_LogStateOverwrites</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Logs changes to the states dictionary.</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">DB_LogStateChanges</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Logs changes to the NPC&#39;s states</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">--// Other stuff</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">WatchClosestPlayer</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// NPC will watch the closest player character to them.</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">AutoSpeed</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// A config value built into the Following state. The NPC character will speed up to catch up to a specific character.</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1">--// Tools</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">CanEquipTools</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Whether or not the NPC can hold onto tools.</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">CanPickupTools</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Whether or not the NPC can pick up tools to begin with. (If they cannot equip a tool, but can pick up tools, they will store it in their backpack if they have one.)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">HasBackpack</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Whether or not the NPC has a backpack that can store items. Disabling this will cause the NPC to drop the items where they were picked up.</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1">--// Destruction</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">DestroyRigWithModule</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Whether calling the Destroy method on a NPC will destroy the rig it&#39;s tied to.</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">AutoDestroyOnDeath</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Self-explanatory. The rig will automatically destroy on death.</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="c1">--// Pathfinding</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="n">PathParams</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="n">AgentCanClimb</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="n">AgentCanJump</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="n">WaypointSpacing</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="n">Costs</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>        <span class="n">Avoid</span> <span class="o">=</span> <span class="nb">math.huge</span><span class="p">;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="p">};</span> <span class="c1">--// Waypoint Parameters.</span>
+</code></pre></div></td></tr></table></div></p>
+</blockquote>
+<h3 id="ncparams"><strong>NCParams</strong></h3>
+<blockquote>
+<p><em>These are properties that can be passed to the GetNearestCharacter method of a NPC.
+Not including them in the table (or not giving a NCParams table at all) will leave them as the default values shown below:</em>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">MustBeVisible</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Must be visible to the NPC&#39;s CanSee method.</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">OnlyPlayerCharacters</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">--// Will only consider Player Characters in the method.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">MustBeAlive</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">--// Ignores rigs without Humanoids, or rigs with health below 0.</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">Position</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">();</span> <span class="c1">--// Defaults to the rig&#39;s pivot position. The position to get the closest character to.</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">MaxDistance</span> <span class="o">=</span> <span class="nb">math.huge</span><span class="p">;</span> <span class="c1">--// The maximum distance a character can be before they are ignored by the method.</span>
+</code></pre></div></td></tr></table></div></p>
+</blockquote>
+<hr />
+<h2 id="methods-and-constructors">Methods and Constructors</h2>
+<h3 id="constructors"><strong>Constructors</strong></h3>
+<h4 id="dynanpcnewrig-configs">DynaNPC.new(Rig, Configs?)</h4>
+<ul>
+<li>Takes a <code>Model</code> and <code>Configs</code> table as parameters.<blockquote>
+<p>Usage:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">-- Modules</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">local</span> <span class="n">DynaNPC</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">).</span><span class="n">DynaNPC</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">-- Instances</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">local</span> <span class="n">Rig</span> <span class="o">=</span> <span class="n">game</span><span class="p">.</span><span class="n">workspace</span><span class="p">.</span><span class="n">Rig</span> <span class="c1">-- Can be any rig.</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1">-- NPCs</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="kd">local</span> <span class="n">NPC</span> <span class="o">=</span> <span class="n">DynaNPC</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">Rig</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+Returns a <code>NPC</code> class, which can use the methods listed below.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="methods"><strong>Methods</strong></h3>
+<h4 id="npcsetwatchingpart">NPC:SetWatching(Part?)</h4>
+<ul>
+<li>Takes a <code>BasePart</code> as a parameter.<blockquote>
+<p>Returns a <code>boolean</code> indicating whether the NPC has successfully switched targets.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npccanseetarget">NPC:CanSee(Target)</h4>
+<ul>
+<li>Takes a <code>BasePart</code> or <code>Model</code> as a parameter.<blockquote>
+<p>Returns a <code>boolean</code> indicating whether the NPC can see the model (any basepart under the model), or the target base part.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcsetstatenewstate">NPC:SetState(NewState, ...)</h4>
+<ul>
+<li>Takes a <code>string</code> and a <code>tuple</code> as parameters.<blockquote>
+<p>Switches the NPC's state to the name if it exists, and runs any additional parameters on said function. Otherwise it'll switch to the <code>None</code> state. Passes the <code>tuple</code> to the <a href="#npclastparams">LastParams</a> table.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcgetnearestcharacterncparams">NPC:GetNearestCharacter(NCParams?)</h4>
+<ul>
+<li>Takes a <code>NCParams</code> table as a parameter.<blockquote>
+<p>Gets the nearest character with parameters. (See above for the parameters.) May not return a character.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcgetbackpack">NPC:GetBackpack()</h4>
+<ul>
+<li>Does not have any parameters.<blockquote>
+<p>Returns a NPC's backpack if it exists, or creates one (and returns it) if the NPC's HasBackpack config is enabled, and they don't have a backpack.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcgettooltoolname">NPC:GetTool(ToolName?)</h4>
+<ul>
+<li>Takes a <code>string</code> as a parameter.<blockquote>
+<p>Returns a tool in the NPC's backpack (if they have one), or the tool they're holding. Essentially FindFirstChildWhichIsA("Tool") but you can specify the name if you want.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcusetoolactivatetool">NPC:UseTool(ActivateTool?)</h4>
+<ul>
+<li>Takes a <code>boolean</code> as a parameter.<blockquote>
+<p>Activates the tool (or deactivates it if it's false), defaults to true. Does not return a value.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcdroptooltargettool">NPC:DropTool(TargetTool)</h4>
+<ul>
+<li>Takes a <code>tool</code> as a parameter.<blockquote>
+<p>Drops the tool from the NPC's inventory or hand. Does not return a value.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npchandlecleanupobject-autocleanup">NPC:HandleCleanup(Object, AutoCleanup)</h4>
+<ul>
+<li>Takes an <code>instance</code>, <code>table</code>, or <code>thread</code> as the first parameter. The second parameter is a <code>boolean</code>.<blockquote>
+<p>Binds an object to be automatically cleaned up upon the NPC's destruction. If AutoCleanup is explicitly defined as <code>false</code>, then it'll remove it from the auto-cleanup if it's already bound.</p>
+</blockquote>
+</li>
+<li>If the parameter being passed is a <code>table</code>, the table must have a <code>:Destroy()</code> method, or it will not be automatically cleaned up.</li>
+</ul>
+<hr />
+<h4 id="npc_debugloglogtext">NPC:_DebugLog(LogText)</h4>
+<ul>
+<li>Takes a <code>string</code> as a parameter.<blockquote>
+<p>Logs text to the console. Will not log text if the NPC's DebugEnabled config is <code>false</code>.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="events"><strong>Events</strong></h3>
+<p>See <a href="../SmartSignal/">SmartSignal</a> for more info.</p>
+<h4 id="npcstateupdated">NPC.StateUpdated</h4>
+<ul>
+<li>Returns : <code>string</code><blockquote>
+<p>Fires whenever the NPC's state changes at any point.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcwaypointbegan">NPC.WaypointBegan</h4>
+<ul>
+<li>Returns: <code>PathWaypoint</code><blockquote>
+<p>Fires whenever the NPC heads towards a waypoint.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcchrtouched">NPC.ChrTouched</h4>
+<ul>
+<li>Returns: <code>model</code><blockquote>
+<p>Fires whenever the NPC touches a humanoid rig.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcconfigchanged">NPC.Config.Changed</h4>
+<ul>
+<li>Returns:<code>Key</code>, <code>NewValue</code>, <code>OldValue</code><blockquote>
+<p>See <a href="../ProxyTable/">ProxyTable</a> for more info.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npceventschanged">NPC.Events.Changed</h4>
+<ul>
+<li>Returns: <code>Key</code>, <code>NewValue</code>, <code>OldValue</code><blockquote>
+<p>See <a href="../ProxyTable/">ProxyTable</a> for more info.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="properties"><strong>Properties</strong></h3>
+<p>Properties of the NPC.</p>
+<h4 id="npcrig">NPC.Rig</h4>
+<ul>
+<li><code>model</code><blockquote>
+<p>The rig the NPC was instantiated with.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npchum">NPC.Hum</h4>
+<ul>
+<li><code>humanoid</code><blockquote>
+<p>The humanoid of the rig the NPC was instantiated with.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npc_autocleanup">NPC._AutoCleanup</h4>
+<ul>
+<li><code>table</code><blockquote>
+<p>A table containing all of the objects to be cleaned up upon the NPC's destruction.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcpath">NPC.Path</h4>
+<blockquote>
+<p>A modified <a href="https://grayzcale.github.io/simplepath/">SimplePath</a> module.</p>
+</blockquote>
+<hr />
+<h4 id="npcanimhandler">NPC.AnimHandler</h4>
+<blockquote>
+<p>An animation handler I've designed.</p>
+</blockquote>
+<hr />
+<h4 id="npcconfigs">NPC.Configs</h4>
+<ul>
+<li><code>table</code><blockquote>
+<p>Dictionary of values. Values can be overwritten directly and the Changed signal of this table will be fired.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcstate">NPC.State</h4>
+<ul>
+<li><code>string</code><blockquote>
+<p>Stores the current state of the NPC.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npcstates">NPC.States</h4>
+<ul>
+<li><code>table</code><blockquote>
+<p>Dictionary of functions. Values can be overwritten directly and the Changed signal of this table will be fired.</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h4 id="npclastparams">NPC.LastParams</h4>
+<ul>
+<li><code>table</code><blockquote>
+<p>Stores the last tuple passed by the NPC's <a href="#npcsetstatenewstate">SetState</a> method.</p>
+</blockquote>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@D_CIPHR" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../Code/js/time.js"></script>
+      
+        <script src="../../Code/js/robloxgroup.js"></script>
+      
+    
+  </body>
+</html>
