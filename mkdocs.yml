@@ -1,6 +1,6 @@
 site_name: CipherHUB
-site_url: https://kranchers.github.io/
-repo_url: https://github.com/Kranchers/CipherHUB
+site_url: https://d-ciphr.github.io/
+repo_url: https://github.com/d-ciphr/CipherHUB
 repo_name: 'Cipher`s Github'
 
 # Theme and Visuals
@@ -46,7 +46,7 @@ markdown_extensions:
 extra:
     social:
      - icon: fontawesome/brands/youtube
-       link: https://www.youtube.com/@MRkranchers
+       link: https://www.youtube.com/@D_CIPHR
 # Additional files
 extra_css:
     - 'Code/css/badges.css'
