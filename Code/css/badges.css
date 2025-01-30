@@ -1,0 +1,33 @@
+/* Base badge styles */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.15rem;
+  margin-left: 5px;
+}
+
+/* Client-Only */
+.client-only {
+  background-color: #3d86d4;
+  color: white;
+}
+
+.client-only::after {
+  content: 'client-only';
+}
+
+/* Server-Only */
+.server-only {
+  background-color: #28a745;
+  color: white;
+}
+
+.server-only::after {
+  content: 'server-only';
+}
