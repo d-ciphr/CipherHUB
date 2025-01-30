@@ -1,6 +1,6 @@
 # Decaying Winter
 A wave-based survival game that was originally designed by Archeximus and Skeletally.
-No longer maintained by the two, I <i>somewhat</i> recently became a part of the team as a programmer.
+No longer maintained by the two, I provided some new systems for a cancelled update of theirs.
 
 Has many features that are either upcoming, or complete.<br>
 Including but not limited to:
